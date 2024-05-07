@@ -1,4 +1,4 @@
-+package PracticaSalud;
+package PracticaSalud;
 import java.util.LinkedList;
 
 import javax.swing.JOptionPane;
@@ -13,7 +13,8 @@ public class metodos {
             paciente_nuevo.setEdad(Integer.parseInt(JOptionPane.showInputDialog("\nIngrese la edad del paciente: ")));
             paciente_nuevo.setRH(JOptionPane.showInputDialog("\nIngrese el tipo de sangre (RH) del paciente: "));
             paciente_nuevo.setU_cita(JOptionPane.showInputDialog("\nIngrese la fecha de la ultima cita (en caso de que haya tenido) de el paciente en el formato (DD/MM/AAAA): "));
-            decision = JOptionPane.showInputDialog("\n¿Desea ingresar otro paciente?(S/N): ");
+            decision = JOptionPane.showInputDialog("\n¿Desea ingresar otro paciente?(S/N): ").toLowerCase();
+            pacientes.add(paciente_nuevo);
     
         }while(decision.equals("s"));
         
