@@ -5,8 +5,8 @@ public class Paciente {
     private String Apellido;
     private int edad;
     private String RH;
-    private LocalDate U_cita;
-    public Paciente(String nombre, String apellido, int edad, String rH, LocalDate u_cita) {
+    private String U_cita;
+    public Paciente(String nombre, String apellido, int edad, String rH, String u_cita) {
         this.nombre = nombre;
         Apellido = apellido;
         this.edad = edad;
@@ -44,10 +44,10 @@ public class Paciente {
     public void setRH(String rH) {
         RH = rH;
     }
-    public LocalDate getU_cita() {
+    public String getU_cita() {
         return U_cita;
     }
-    public void setU_cita(LocalDate u_cita) {
+    public void setU_cita(String u_cita) {
         U_cita = u_cita;
     }
     public static String AsignarCita(int edad){
