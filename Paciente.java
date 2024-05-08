@@ -1,5 +1,6 @@
 package PracticaSalud;
 import java.time.LocalDate;
+import java.util.LinkedList;
 public class Paciente {
     private String nombre;
     private String Apellido;
@@ -50,20 +51,6 @@ public class Paciente {
     public void setU_cita(String u_cita) {
         U_cita = u_cita;
     }
-    public static String AsignarCita(int edad){
-        String mensaje = "";
-       if(edad >= 25 && edad < 35 ){
-        mensaje = "2 meses y medio";
-       }
-       else if(edad >= 35 && edad < 45){
-        mensaje = "Mes y medio";
-       }else if(edad > 45 ){
-        mensaje = "15 días";
-       }else{
-        mensaje = "No se asigna periodo";
-         
-       }
-       return mensaje;
-    }
+    
 
 }
