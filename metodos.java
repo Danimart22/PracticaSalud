@@ -18,28 +18,40 @@ public class metodos {
 
     public static void Mostrar_Paciente(LinkedList<Paciente> pacientes) {
         for (Paciente paciente : pacientes) {
-            JOptionPane.showMessageDialog(null, "\nEl nombre de el paciente es: " + paciente.getNombre() + "\nEl apellido del paciente es: "
-            + paciente.getApellido() + "\nLa edad de el paciente es: " + paciente.getEdad()
-            + "\nEl RH del paciente es: " + paciente.getRH() + "\nLa ultima cita de el paciente fue el: "
-            + paciente.getU_cita());
+            JOptionPane.showMessageDialog(null,
+                    "\nEl nombre de el paciente es: " + paciente.getNombre() + "\nEl apellido del paciente es: "
+                            + paciente.getApellido() + "\nLa edad de el paciente es: " + paciente.getEdad()
+                            + "\nEl RH del paciente es: " + paciente.getRH()
+                            + "\nLa ultima cita de el paciente fue el: "
+                            + paciente.getU_cita());
         }
-      
+
     }
 
     public static void AsignarCita(LinkedList<Paciente> listaPacientees) {
         for (Paciente p : listaPacientees) {
             if (p.getEdad() >= 25 && p.getEdad() < 35) {
-                JOptionPane.showMessageDialog(null, p.getNombre()+ "tiene cita cada 2 meses y medio");
+                JOptionPane.showMessageDialog(null, p.getNombre() + "tiene cita cada 2 meses y medio");
             } else if (p.getEdad() >= 35 && p.getEdad() < 45) {
-                JOptionPane.showMessageDialog(null, p.getNombre()+" tiene cita cada mes y medio");
+                JOptionPane.showMessageDialog(null, p.getNombre() + " tiene cita cada mes y medio");
             } else if (p.getEdad() > 45) {
-                JOptionPane.showMessageDialog(null, p.getNombre()+" tiene cita cada 15 días");
+                JOptionPane.showMessageDialog(null, p.getNombre() + " tiene cita cada 15 días");
             } else {
-                JOptionPane.showMessageDialog(null, p.getNombre()+" no se le asigna cita");
+                JOptionPane.showMessageDialog(null, p.getNombre() + " no se le asigna cita");
 
             }
         }
 
-        
+    }
+    public static Doctores Registrar_Doctor (){
+        Doctores doctor = new Doctores(null, null, null);
+        doctor.setNombre(JOptionPane.showInputDialog("\nDigite el nombre de el doctor: "));
+        doctor.setDisponibilidad(true);
+        return doctor;
+    }
+    public static void AsignarCitaDoctor(LinkedList<Paciente> pacientes, LinkedList<Doctores> doctores){
+        for (Paciente p : pacientes) {
+            p.setS_cita("");
+        }
     }
 }

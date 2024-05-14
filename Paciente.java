@@ -1,12 +1,11 @@
 package PracticaSalud;
-import java.time.LocalDate;
-import java.util.LinkedList;
 public class Paciente {
     private String nombre;
     private String Apellido;
     private int edad;
     private String RH;
     private String U_cita;
+    private String S_cita;
     public Paciente(String nombre, String apellido, int edad, String rH, String u_cita) {
         this.nombre = nombre;
         Apellido = apellido;
@@ -50,6 +49,12 @@ public class Paciente {
     }
     public void setU_cita(String u_cita) {
         U_cita = u_cita;
+    }
+    public String getS_cita() {
+        return S_cita;
+    }
+    public void setS_cita(String s_cita) {
+        S_cita = s_cita;
     }
     
 
